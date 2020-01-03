@@ -1,2 +1,6 @@
 # MyAndroidLearningProgram
-我的安卓学习项目
+
+## 目录结构
+
+## 代码结构
+
