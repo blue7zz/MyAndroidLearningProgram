@@ -3,6 +3,8 @@ package today.zjc.myandroidlearningprogram.java;
 import org.junit.Test;
 
 import java.lang.System.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 
 import static org.junit.Assert.*;
@@ -108,8 +110,16 @@ public class ExampleBase {
 
     }
 
+    @Test
+    public void string() {
+        String str = "Hello"; //自动加入堆内
+        String str1 = new String("dddd");
+        str1.intern();        //手动加入堆内
 
 
+        StringBuffer s = new StringBuffer(str1);  //安全的带线程锁的
+        StringBuilder s1 = new StringBuilder(str); //非安全的
+    }
 
     @Test
     public void addition_isCorrect() {
